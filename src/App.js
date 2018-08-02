@@ -47,7 +47,7 @@ class App extends Component {
           <Header username={this.state.username} />{" "}
           <Grid container classNames={classes.container} spacing={24}>
             <Grid item xs={12} md={12}>
-              <Stream className="stream" />
+              <Stream className="stream" streamUrl={streamUrl}/>
             </Grid>
             <Grid item xs={12} md={12}>
               <MapWithAMarkerWithLabel
