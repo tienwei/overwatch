@@ -8,6 +8,7 @@
     "aws-amplify": "^1.0.4",
     "aws-amplify-react": "^1.0.4",
     "qs": "^6.5.2",
+    "ramda": "^0.25.0",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-google-maps": "^9.4.5",
