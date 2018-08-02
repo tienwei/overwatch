@@ -3,11 +3,13 @@ import logo from "./logo.svg";
 import "./App.css";
 import { withAuthenticator } from "aws-amplify-react";
 import { MapWithAMarkerWithLabel } from "./gmap";
+import Header from "./components/Header";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
+        <Header />
         <MapWithAMarkerWithLabel
           googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBT66flK1gV5hymNR39yYdgKU6seGc5gD8&v=3.exp&libraries=geometry,drawing,places"
           loadingElement={<div style={{ height: `100%` }} />}
