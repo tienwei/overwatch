@@ -11,16 +11,21 @@ const styles = {
   }
 };
 
-class Banner extends React.Component {
+class Stream extends React.Component {
   render() {
-    const { classes } = this.props;
+    const { classes, streamUrl } = this.props;
 
-    return <div className={classes.root}>This is the streaming div</div>;
+    return(
+        <div className={classes.root}>
+            <video controls autoPlay src={streamUrl}
+                   type="application/x-mpegURL"/>
+        </div>
+    )
   }
 }
 
-Banner.propTypes = {
+Stream.propTypes = {
   classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styles)(Banner);
+export default withStyles(styles)(Stream);

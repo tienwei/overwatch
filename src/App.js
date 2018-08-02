@@ -39,6 +39,7 @@ class App extends Component {
   }
   render() {
     const { classes } = this.props;
+    const streamUrl = "http://www.streambox.fr/playlists/test_001/stream.m3u8";//TODO: should receive from Keigo
     return (
       <MuiThemeProvider theme={theme}>
         <div className="App">
@@ -56,7 +57,7 @@ class App extends Component {
               />
             </Grid>
             <Grid item xs={6} md={6}>
-              <Stream className="stream" />
+              <Stream className="stream" streamUrl={streamUrl}/>
             </Grid>
           </Grid>
         </div>
