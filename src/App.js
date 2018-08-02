@@ -5,6 +5,7 @@ import { MapWithAMarkerWithLabel } from "./gmap";
 import Header from "./components/Header";
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import { withStyles } from "@material-ui/core/styles";
+import Grid from "@material-ui/core/Grid";
 import purple from "@material-ui/core/colors/purple";
 import { compose } from "ramda";
 import Banner from "./components/Banner";
@@ -19,8 +20,7 @@ const theme = createMuiTheme({
 
 const styles = {
   content: {
-    display: "flex",
-    flexWrap: "wrap"
+    flexGrow: 1
   }
 };
 
@@ -32,19 +32,21 @@ class App extends Component {
         <div className="App">
           <Banner />
           <Header />
-          <div className="content">
-            <MapWithAMarkerWithLabel
-              googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBT66flK1gV5hymNR39yYdgKU6seGc5gD8&v=3.exp&libraries=geometry,drawing,places"
-              loadingElement={<div style={{ height: `100%` }} />}
-              containerElement={
-                <div
-                  style={{ display: `flex`, width: "50vw", height: `100vh` }}
-                />
-              }
-              mapElement={<div style={{ flex: 1 }} />}
-            />
-          </div>
-          <Stream />
+          <Grid container classNames={classes.container} spacing={24}>
+            <Grid item xs={6} md={6}>
+              <MapWithAMarkerWithLabel
+                googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBT66flK1gV5hymNR39yYdgKU6seGc5gD8&v=3.exp&libraries=geometry,drawing,places"
+                loadingElement={<div style={{ height: `100%` }} />}
+                containerElement={
+                  <div style={{ display: `flex`, height: `100vh` }} />
+                }
+                mapElement={<div style={{ flex: 1 }} />}
+              />
+            </Grid>
+            <Grid item xs={6} md={6}>
+              <Stream className="stream" />
+            </Grid>
+          </Grid>
         </div>
       </MuiThemeProvider>
     );
