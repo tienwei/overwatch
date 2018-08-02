@@ -6,14 +6,13 @@ import Header from "./components/Header";
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import { withStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
-import purple from "@material-ui/core/colors/purple";
 import { compose } from "ramda";
 import Banner from "./components/Banner";
 import Stream from "./components/Stream";
 
 const theme = createMuiTheme({
   palette: {
-    primary: { main: purple[500] }, // Purple and green play nicely together.
+    primary: { main: "#582c82" }, // Purple and green play nicely together.
     secondary: { main: "#11cb5f" } // This is just green.A700 as hex.
   }
 });
@@ -25,13 +24,26 @@ const styles = {
 };
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      authData: this.props.authData,
+      authState: this.props.authState,
+      modalShowing: false,
+      loading: false,
+      error: null,
+      username: this.props.authData.username || "",
+      password: this.props.authData.password || "",
+      user: null
+    };
+  }
   render() {
     const { classes } = this.props;
     return (
       <MuiThemeProvider theme={theme}>
         <div className="App">
           <Banner />
-          <Header />
+          <Header username={this.state.username} />{" "}
           <Grid container classNames={classes.container} spacing={24}>
             <Grid item xs={6} md={6}>
               <MapWithAMarkerWithLabel
