@@ -45,7 +45,10 @@ class App extends Component {
           <Banner />
           <Header username={this.state.username} />{" "}
           <Grid container classNames={classes.container} spacing={24}>
-            <Grid item xs={6} md={6}>
+            <Grid item xs={12} md={12}>
+              <Stream className="stream" />
+            </Grid>
+            <Grid item xs={12} md={12}>
               <MapWithAMarkerWithLabel
                 googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBT66flK1gV5hymNR39yYdgKU6seGc5gD8&v=3.exp&libraries=geometry,drawing,places"
                 loadingElement={<div style={{ height: `100%` }} />}
@@ -54,9 +57,6 @@ class App extends Component {
                 }
                 mapElement={<div style={{ flex: 1 }} />}
               />
-            </Grid>
-            <Grid item xs={6} md={6}>
-              <Stream className="stream" />
             </Grid>
           </Grid>
         </div>
