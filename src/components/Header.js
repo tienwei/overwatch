@@ -12,6 +12,7 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 import FormGroup from "@material-ui/core/FormGroup";
 import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
+import logo from "../logo.png";
 
 const styles = {
   root: {
@@ -23,6 +24,10 @@ const styles = {
   menuButton: {
     marginLeft: -12,
     marginRight: 20
+  },
+  logo: {
+    width: "100px",
+    height: "50px"
   }
 };
 
@@ -63,6 +68,7 @@ class MenuAppBar extends React.Component {
             label={auth ? "Logout" : "Login"}
           />
         </FormGroup> */}
+
         <AppBar position="static" color="primary">
           <Toolbar>
             <IconButton
@@ -72,6 +78,7 @@ class MenuAppBar extends React.Component {
             >
               <MenuIcon />
             </IconButton>
+
             <Typography
               variant="title"
               color="inherit"
