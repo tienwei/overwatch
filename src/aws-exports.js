@@ -20,6 +20,11 @@ const awsmobile = {
     'aws_project_name': 'overwatch-web',
     'aws_project_region': 'us-east-1',
     'aws_resource_name_prefix': 'overwatchweb-mobilehub-631424005',
+    'aws_sign_in_enabled': 'enable',
+    'aws_user_pools': 'enable',
+    'aws_user_pools_id': 'us-east-1_VAwhrluwC',
+    'aws_user_pools_mfa_type': 'OFF',
+    'aws_user_pools_web_client_id': '3hhhveteje0imho9629v6uplu8',
 }
 
 export default awsmobile;
