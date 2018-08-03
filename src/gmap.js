@@ -24,21 +24,21 @@ export const MapWithAMarkerWithLabel = compose(
 
   recordLocation(payLoad);
 
-    if (!lat || !lng) alert('No coordinates are set');
+  if (!lat || !lng) alert("No coordinates are set");
 
-    return (
-      <GoogleMap defaultZoom={15} defaultCenter={{ lat, lng }}>
-        <MarkerWithLabel position={{ lat, lng }}>
+  return (
+    <GoogleMap defaultZoom={15} defaultCenter={{ lat, lng }}>
+      <MarkerWithLabel position={{ lat, lng }}>
+        <div>
           <div className-="markerContainer">
             <div className="svgContainer">
               {hackHumanSvg}
               {hackSvg}
             </div>
             <div className="nameContainer">
-              {username || 'Your friend'} is here
+              {username || "Your friend"} is here
             </div>
           </div>
-          <div className="nameContainer">{username} is here</div>
         </div>
       </MarkerWithLabel>
     </GoogleMap>
