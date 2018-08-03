@@ -3,7 +3,7 @@ import { API } from "aws-amplify";
 export const recordLocation = payLoad => {
   const { userId, latitude, longitude } = payLoad;
 
-  return API.post("/Locations", "/Locations", {
+  return API.post("LocationsCRUD", "/Locations", {
     body: {
       userId,
       latitude,

@@ -180,6 +180,9 @@ app.post(path, function(req, res) {
       req.apiGateway.event.requestContext.identity.cognitoIdentityId || UNAUTH;
   }
 
+  req.body["itemId"] = uuid.v1();
+  console.log(req.body["itemId"]);
+
   let putItemParams = {
     TableName: tableName,
     Item: req.body
