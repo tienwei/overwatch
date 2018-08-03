@@ -22,6 +22,8 @@ export const MapWithAMarkerWithLabel = compose(withScriptjs, withGoogleMap)(
 
     recordLocation(payLoad);
 
+    if (!lat || !lng) alert('No coordinates are set');
+
     return (
       <GoogleMap defaultZoom={14} defaultCenter={{ lat, lng }}>
         <MarkerWithLabel position={{ lat, lng }}>
@@ -30,7 +32,9 @@ export const MapWithAMarkerWithLabel = compose(withScriptjs, withGoogleMap)(
               {hackHumanSvg}
               {hackSvg}
             </div>
-            <div className="nameContainer">{username} is here</div>
+            <div className="nameContainer">
+              {username || 'Your friend'} is here
+            </div>
           </div>
         </MarkerWithLabel>
       </GoogleMap>
