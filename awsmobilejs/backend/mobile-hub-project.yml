@@ -11,31 +11,31 @@ features:
           sdk-generation-stage-name: Development
         paths:
           /Locations: !com.amazonaws.mobilehub.v0.Function 
-            codeFilename: uploads/Locations-20180803110003.zip
+            codeFilename: uploads/Locations-20180803112300.zip
             description: 'Handler for calls to resource path : /Locations/{proxy+}'
             enableCORS: true
             environment: {}
             handler: lambda.handler
-            hashcode: DdSeRGypD2qTH/vXvjvn/DwCNt/GYHrTm8pYKPR1r5c=
+            hashcode: rxMp/8vb6kmxXMQZQFSfv9YecVPsCcL9qZ4WqmCRneM=
             memorySize: '128'
-            modified: '2018-08-03T01:01:11.848+0000'
+            modified: '2018-08-03T01:26:02.571+0000'
             name: Locations
             runtime: nodejs6.10
             timeout: '3'
-            version: voQ6s8YZnNU4WtdgcK5IdCvSpsA_ljUY
+            version: 5GXNHdsAXh6YyYxKPeleS9c8g2ZIHxkx
           '/Locations/{proxy+}': !com.amazonaws.mobilehub.v0.Function 
-            codeFilename: uploads/Locations-20180803110003.zip
+            codeFilename: uploads/Locations-20180803112300.zip
             description: 'Handler for calls to resource path : /Locations/{proxy+}'
             enableCORS: true
             environment: {}
             handler: lambda.handler
-            hashcode: DdSeRGypD2qTH/vXvjvn/DwCNt/GYHrTm8pYKPR1r5c=
+            hashcode: rxMp/8vb6kmxXMQZQFSfv9YecVPsCcL9qZ4WqmCRneM=
             memorySize: '128'
-            modified: '2018-08-03T01:01:11.848+0000'
+            modified: '2018-08-03T01:26:02.571+0000'
             name: Locations
             runtime: nodejs6.10
             timeout: '3'
-            version: RA8GFfOULoz2pU8GB4H8IabExqnjqf6v
+            version: 0czSoX2I4_tCbEa19zoL5iHt02rbC8ng
   content-delivery: !com.amazonaws.mobilehub.v0.ContentDelivery 
     attributes:
       enabled: true
@@ -53,6 +53,7 @@ features:
               longitude: S
               timeAt: N
               userId: S
+              userName: S
             hashKeyName: userId
             hashKeyType: S
             rangeKeyName: itemId
