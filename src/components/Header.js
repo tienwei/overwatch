@@ -1,18 +1,18 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { withStyles } from "@material-ui/core/styles";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
-import IconButton from "@material-ui/core/IconButton";
-import MenuIcon from "@material-ui/icons/Menu";
-import AccountCircle from "@material-ui/icons/AccountCircle";
-import Switch from "@material-ui/core/Switch";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import FormGroup from "@material-ui/core/FormGroup";
-import MenuItem from "@material-ui/core/MenuItem";
-import Menu from "@material-ui/core/Menu";
-import logo from "../logo.png";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
+import AccountCircle from '@material-ui/icons/AccountCircle';
+import Switch from '@material-ui/core/Switch';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import FormGroup from '@material-ui/core/FormGroup';
+import Menu from '@material-ui/core/Menu';
+// import MenuItem from "@material-ui/core/MenuItem";
+// import logo from "../logo.png";
 
 const styles = {
   root: {
@@ -26,8 +26,8 @@ const styles = {
     marginRight: 20
   },
   logo: {
-    width: "100px",
-    height: "50px"
+    width: '100px',
+    height: '50px'
   }
 };
 
@@ -65,7 +65,7 @@ class MenuAppBar extends React.Component {
                 aria-label="LoginSwitch"
               />
             }
-            label={auth ? "Logout" : "Login"}
+            label={auth ? 'Logout' : 'Login'}
           />
         </FormGroup>
 
@@ -89,7 +89,7 @@ class MenuAppBar extends React.Component {
             {auth && (
               <div>
                 <IconButton
-                  aria-owns={open ? "menu-appbar" : null}
+                  aria-owns={open ? 'menu-appbar' : null}
                   aria-haspopup="true"
                   onClick={this.handleMenu}
                   color="inherit"
@@ -100,12 +100,12 @@ class MenuAppBar extends React.Component {
                   id="menu-appbar"
                   anchorEl={anchorEl}
                   anchorOrigin={{
-                    vertical: "top",
-                    horizontal: "right"
+                    vertical: 'top',
+                    horizontal: 'right'
                   }}
                   transformOrigin={{
-                    vertical: "top",
-                    horizontal: "right"
+                    vertical: 'top',
+                    horizontal: 'right'
                   }}
                   open={open}
                   onClose={this.handleClose}
