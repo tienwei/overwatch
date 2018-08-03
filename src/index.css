@@ -10,9 +10,9 @@ body {
 
 .svgContainer > *:first-child {
   position: absolute;
-  height: 80px;
-  width: 80px;
-  padding: 10px;
+  height: 60px;
+  width: 60px;
+  padding: 20px;
 }
 
 .nameContainer {

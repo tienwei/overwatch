@@ -25,7 +25,7 @@ export const MapWithAMarkerWithLabel = compose(withScriptjs, withGoogleMap)(
     if (!lat || !lng) alert('No coordinates are set');
 
     return (
-      <GoogleMap defaultZoom={14} defaultCenter={{ lat, lng }}>
+      <GoogleMap defaultZoom={15} defaultCenter={{ lat, lng }}>
         <MarkerWithLabel position={{ lat, lng }}>
           <div>
             <div className="svgContainer">
