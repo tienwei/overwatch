@@ -9,6 +9,7 @@ See the License for the specific language governing permissions and limitations 
 const express = require("express");
 const bodyParser = require("body-parser");
 const AWS = require("aws-sdk");
+const uuid = require("uuid");
 const awsServerlessExpressMiddleware = require("aws-serverless-express/middleware");
 
 AWS.config.update({ region: process.env.REGION });
@@ -178,6 +179,9 @@ app.post(path, function(req, res) {
     req.body["userId"] =
       req.apiGateway.event.requestContext.identity.cognitoIdentityId || UNAUTH;
   }
+
+  req.body["itemId"] = uuid.v1();
+  console.log(req.body["itemId"]);
 
   let putItemParams = {
     TableName: tableName,

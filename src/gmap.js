@@ -3,6 +3,7 @@ import React from 'react';
 import { withScriptjs, withGoogleMap, GoogleMap } from 'react-google-maps';
 import qs from 'qs';
 import { MarkerWithLabel } from 'react-google-maps/lib/components/addons/MarkerWithLabel';
+import { recordLocation } from './services/locations';
 import { hackHumanSvg, hackSvg } from './assets/hackSvg';
 
 export const MapWithAMarkerWithLabel = compose(withScriptjs, withGoogleMap)(
@@ -13,8 +14,16 @@ export const MapWithAMarkerWithLabel = compose(withScriptjs, withGoogleMap)(
     const lat = parseFloat(intLat);
     const lng = parseFloat(intLng);
 
+    const payLoad = {
+      userId: username,
+      latitude: lat,
+      longitude: lng
+    };
+
+    recordLocation(payLoad);
+
     return (
-      <GoogleMap defaultZoom={16} defaultCenter={{ lat, lng }}>
+      <GoogleMap defaultZoom={14} defaultCenter={{ lat, lng }}>
         <MarkerWithLabel position={{ lat, lng }}>
           <div>
             <div className="svgContainer">

@@ -18,7 +18,7 @@ const awsmobile = {
     'aws_content_delivery_cloudfront_domain': 'de2ygfwpgx862.cloudfront.net',
     'aws_dynamodb': 'enable',
     'aws_dynamodb_all_tables_region': 'us-east-1',
-    'aws_dynamodb_table_schemas': [{"tableName":"overwatchweb-mobilehub-631424005-Locations","attributes":[{"name":"userId","type":"S"},{"name":"itemId","type":"S"},{"name":"latitude","type":"N"},{"name":"longitude","type":"N"},{"name":"streamUrl","type":"S"},{"name":"time","type":"N"}],"indexes":[],"region":"us-east-1","hashKey":"userId","rangeKey":"itemId"}],
+    'aws_dynamodb_table_schemas': [{"tableName":"overwatchweb-mobilehub-631424005-Locations","attributes":[{"name":"userId","type":"S"},{"name":"itemId","type":"S"},{"name":"latitude","type":"S"},{"name":"longitude","type":"S"},{"name":"timeAt","type":"N"}],"indexes":[],"region":"us-east-1","hashKey":"userId","rangeKey":"itemId"}],
     'aws_mobile_analytics_app_id': '907055e4a7d84de689cb2b72f6f0a841',
     'aws_mobile_analytics_app_region': 'us-east-1',
     'aws_project_id': 'cb74f19c-da1d-4ea9-9c59-519dea7fe2dd',
