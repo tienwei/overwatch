@@ -56,6 +56,7 @@ class MenuAppBar extends React.Component {
 
     return (
       <div className={classes.root}>
+<<<<<<< HEAD
         <FormGroup>
           <FormControlLabel
             style={{
@@ -72,6 +73,20 @@ class MenuAppBar extends React.Component {
             label={auth ? 'Logout' : 'Login'}
           />
         </FormGroup>
+=======
+        {/*<FormGroup>*/}
+          {/*<FormControlLabel*/}
+            {/*control={*/}
+              {/*<Switch*/}
+                {/*checked={auth}*/}
+                {/*onChange={this.handleChange}*/}
+                {/*aria-label="LoginSwitch"*/}
+              {/*/>*/}
+            {/*}*/}
+            {/*label={auth ? 'Logout' : 'Login'}*/}
+          {/*/>*/}
+        {/*</FormGroup>*/}
+>>>>>>> d8c6c3c5b4b2b9894ea4184d60fc24364ffbe257
 
         <AppBar position="static" color="primary">
           <Toolbar>

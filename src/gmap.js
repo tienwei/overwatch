@@ -15,7 +15,7 @@ export const MapWithAMarkerWithLabel = compose(withScriptjs, withGoogleMap)(
     const lng = parseFloat(intLng);
 
     const payLoad = {
-      userId: username,
+      userName: username,
       latitude: lat,
       longitude: lng
     };
@@ -27,13 +27,15 @@ export const MapWithAMarkerWithLabel = compose(withScriptjs, withGoogleMap)(
     return (
       <GoogleMap defaultZoom={15} defaultCenter={{ lat, lng }}>
         <MarkerWithLabel position={{ lat, lng }}>
-          <div className-="markerContainer">
-            <div className="svgContainer">
-              {hackHumanSvg}
-              {hackSvg}
-            </div>
-            <div className="nameContainer">
-              {username || 'Your friend'} is here
+          <div>
+            <div className-="markerContainer">
+              <div className="svgContainer">
+                {hackHumanSvg}
+                {hackSvg}
+              </div>
+              <div className="nameContainer">
+                {username || 'Your friend'} is here
+              </div>
             </div>
           </div>
         </MarkerWithLabel>
