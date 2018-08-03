@@ -10,6 +10,10 @@ import { compose } from 'ramda';
 import Banner from './components/Banner';
 import Stream from './components/Stream';
 
+//TODO: should receive from Keig
+const streamUrl =
+  'https://814bffb9b389f652.mediapackage.ap-southeast-2.amazonaws.com/out/v1/ebb32a32a532456398dd8075b6b06de8/index.m3u8';
+
 const theme = createMuiTheme({
   palette: {
     primary: { main: '#582c82' }, // Purple and green play nicely together.
@@ -39,8 +43,7 @@ class App extends Component {
   }
   render() {
     const { classes } = this.props;
-    const streamUrl =
-      'https://814bffb9b389f652.mediapackage.ap-southeast-2.amazonaws.com/out/v1/ebb32a32a532456398dd8075b6b06de8/index.m3u8'; //TODO: should receive from Keigo
+
     return (
       <MuiThemeProvider theme={theme}>
         <div className="App">

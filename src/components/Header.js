@@ -54,40 +54,26 @@ class MenuAppBar extends React.Component {
     const { auth, anchorEl } = this.state;
     const open = Boolean(anchorEl);
 
+    // Logout button removed
+    // <FormGroup>
+    //   <FormControlLabel
+    //     style={{
+    //       padding: '0em 2em',
+    //       height: '30px'
+    //     }}
+    //     control={
+    //       <Switch
+    //         checked={auth}
+    //         onChange={this.handleChange}
+    //         aria-label="LoginSwitch"
+    //       />
+    //     }
+    //     label={auth ? 'Logout' : 'Login'}
+    //   />
+    // </FormGroup>
+
     return (
       <div className={classes.root}>
-<<<<<<< HEAD
-        <FormGroup>
-          <FormControlLabel
-            style={{
-              padding: '0em 2em',
-              height: '30px'
-            }}
-            control={
-              <Switch
-                checked={auth}
-                onChange={this.handleChange}
-                aria-label="LoginSwitch"
-              />
-            }
-            label={auth ? 'Logout' : 'Login'}
-          />
-        </FormGroup>
-=======
-        {/*<FormGroup>*/}
-          {/*<FormControlLabel*/}
-            {/*control={*/}
-              {/*<Switch*/}
-                {/*checked={auth}*/}
-                {/*onChange={this.handleChange}*/}
-                {/*aria-label="LoginSwitch"*/}
-              {/*/>*/}
-            {/*}*/}
-            {/*label={auth ? 'Logout' : 'Login'}*/}
-          {/*/>*/}
-        {/*</FormGroup>*/}
->>>>>>> d8c6c3c5b4b2b9894ea4184d60fc24364ffbe257
-
         <AppBar position="static" color="primary">
           <Toolbar>
             <IconButton
