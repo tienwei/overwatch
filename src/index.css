@@ -6,13 +6,20 @@ body {
 
 .svgContainer {
   position: relative;
+  margin-left: 15px;
+}
+
+.markerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .svgContainer > *:first-child {
   position: absolute;
-  height: 80px;
-  width: 80px;
-  padding: 10px;
+  height: 60px;
+  width: 60px;
+  padding: 20px;
 }
 
 .nameContainer {
@@ -20,7 +27,8 @@ body {
   font-weight: 900;
   font-family: sans-serif;
   white-space: nowrap;
-  background-color: rgba(255, 0, 0, 0.6);
-  padding: 5px;
+  background-color: rgba(255, 0, 0, 0.7);
+  padding: 5px 10px;
   border-radius: 2px;
+  margin-top: -20px;
 }
