@@ -3,6 +3,7 @@ import React from "react";
 import { withScriptjs, withGoogleMap, GoogleMap } from "react-google-maps";
 import qs from "qs";
 import { MarkerWithLabel } from "react-google-maps/lib/components/addons/MarkerWithLabel";
+import { recordLocation } from "./services/locations";
 
 export const MapWithAMarkerWithLabel = compose(
   withScriptjs,
@@ -14,6 +15,14 @@ export const MapWithAMarkerWithLabel = compose(
   const lat = parseFloat(intLat);
   const lng = parseFloat(intLng);
   console.log(window.google);
+
+  const payLoad = {
+    userId: username,
+    latitude: lat,
+    longitude: lng
+  };
+
+  recordLocation(payLoad);
 
   return (
     <GoogleMap defaultZoom={14} defaultCenter={{ lat, lng }}>

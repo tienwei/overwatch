@@ -9,6 +9,7 @@ See the License for the specific language governing permissions and limitations 
 const express = require("express");
 const bodyParser = require("body-parser");
 const AWS = require("aws-sdk");
+const uuid = require("uuid");
 const awsServerlessExpressMiddleware = require("aws-serverless-express/middleware");
 
 AWS.config.update({ region: process.env.REGION });
