@@ -27,11 +27,13 @@ class Banner extends React.Component {
     const { classes } = this.props;
 
     return (
-      <div
-        className={classes.root}
-        style={{ backgroundImage: `url(${bgImage})` }}
-      >
-        <img src={logo} className={classes.logo} alt="banner" />
+      <div style={{ padding: '1em 1em 0em 1em' }}>
+        <div
+          className={classes.root}
+          style={{ backgroundImage: `url(${bgImage})` }}
+        >
+          <img src={logo} className={classes.logo} alt="banner" />
+        </div>
       </div>
     );
   }

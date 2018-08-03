@@ -58,6 +58,10 @@ class MenuAppBar extends React.Component {
       <div className={classes.root}>
         <FormGroup>
           <FormControlLabel
+            style={{
+              padding: '0em 2em',
+              height: '30px'
+            }}
             control={
               <Switch
                 checked={auth}
