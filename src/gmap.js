@@ -27,7 +27,7 @@ export const MapWithAMarkerWithLabel = compose(withScriptjs, withGoogleMap)(
     return (
       <GoogleMap defaultZoom={15} defaultCenter={{ lat, lng }}>
         <MarkerWithLabel position={{ lat, lng }}>
-          <div>
+          <div className-="markerContainer">
             <div className="svgContainer">
               {hackHumanSvg}
               {hackSvg}
